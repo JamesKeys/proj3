@@ -3,30 +3,80 @@
 <head>
     <meta charset="utf-8">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
-    <script type="text/javascript" src="musixScript.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <script type="text/javascript" src="scripts/musixScript.js"></script>
 
     <title>Project 3</title>
     <top>
-        <h1>Project 3</h1>
-        <h3>Using the Musix Match API</h3>
-        <p>Jim Keys, Michaela Cohick, and Eliza Climo</p>
+        <nav class="navbar navbar-light bg-light">
+            <b class="navbar-brand" href="#">
+                <img src="images/musicNotes.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                PROJECT 3
+            </b>
+            <span class="navbar-text">
+                Powered by Lyrics.ovh
+            </span>
+        </nav>
     </top>
 </head>
-
+</br>
 <body>
-    <h2 id="musicTitle">Click to load a new song!</h2>
-        <p>
-            <label for="track"> Song Name </label>
-            <input name="track" id="track" required/>
-        </p>
-        <p>
-            <label for="artist"> Artist Name </label>
-            <input name="artist" id="artist" required/>
-        </p>
-        <button onclick="getLyrics()">Get Song</button>
-        <button onclick="window.location.reload()">Clear Lyrics</button>
-    <br></br>
-    <pre id="lyrics"></pre>
+    <div class="row">
+<div class="col-8">
+<h2 id="musicTitle">Get the Lyrics to Your Favorite Songs</h2>
+</br>
+<div class="d-flex p-2 bd-highlight">
+<div class="input-group input-group-md">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-md">Song Name</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="track">
+</div>
+</div> 
+<div class="d-flex p-2 bd-highlight">
+<div class="input-group input-group-md">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-md">Artist Name</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="artist">
+</div>
+</div>
+</br>
+<button type="button" class="btn btn-primary" onclick="getLyrics()">Get Song</button>
+<button type="button" class="btn btn-outline-primary" onclick="window.location.reload()">Clear</button>
+<br></br>
+<div class="d-flex p-2 bd-highlight">
+<pre id="lyrics"></pre>
+</div>
+</div>
+<div class="col-4">
 </body>
+<div class="twitter">
+<a class="twitter-timeline" 
+data-width="300" 
+data-height="550" 
+data-theme="dark" 
+data-link-color="#2B7BB9" 
+href="https://twitter.com/twittermusic/timelines/393773266801659904?lang=en">
+Music Tweets </a> 
+<br></br>
+</div>
+    <div>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
+    class="twitter-share-button" 
+    data-size="large" 
+    data-text="This Lyric Finder is awesome! Go check it out! " 
+    data-url="http://www.csc.villanova.edu/~mcohick/project3/index.html" 
+    data-hashtags="project3,VillanovaCSC" 
+    data-show-count="false">Tweet</a>
+    </div>
+</div>
+    </div>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">Created by: Michaela, Jim, Eliza</div>
+</footer>
 </html>
