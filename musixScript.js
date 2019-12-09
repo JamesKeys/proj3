@@ -1,16 +1,13 @@
+var getLyrics = function() {
+    var songName = document.getElementById("track").value;
+    var artistName = document.getElementById("artist").value;
+    var request = new XMLHttpRequest();
+    request.open('GET', 'https://private-anon-52a9fd176e-lyricsovh.apiary-proxy.com/v1/' + artistName + '/' + songName, true);
 
-var apikey = "055f4eeef49f8d3f6efbafee95fa0939"; 
-var request = new XMLHttpRequest();
-var songid = "https//www.api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=" + apikey + "&chart_name=top&page=1&page_size=1&country=us&f_has_lyrics=1";
-request.open('GET', 'https://www.api.musixmatch.com/ws/1.1/', true);
-
-request.onload = function() {
-    var data = JSON.parse(this.response());
-    data.forEach(title => {
-        console.log(title);
-    })
-}
-loadNewSong = function() {
-
+    request.onload = function() {
+        var data = JSON.parse(this.response);
+        var lyricsSrc = data.lyrics;
+        document.getElementById("lyrics").innerHTML = lyricsSrc;
+    }
     request.send();
 }
