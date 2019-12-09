@@ -1,0 +1,33 @@
+body {
+    background-color: lightblue;
+    align-content: center;
+    text-align: center;
+}
+
+.input-group {
+    width: 50%;
+}
+
+.d-flex {
+    justify-content: center;
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+}
+
+pre {
+    background: white;
+    border-radius: 20px;
+}
+
+footer {
+    background: #dfdfdf;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#lyrics {
+    margin-bottom: 5%;
+}
